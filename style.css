@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: linear-gradient(to right, #1c1c1c, #2e2e2e);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.marquee-wrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee span {
+  display: inline-block;
+  font-size: 20em;
+  font-weight: bold;
+  white-space: nowrap;
+  color: white;
+
+  animation: scrollTrick 50s linear infinite;
+}
+
+/* 💡 Animasi: masuk cepat, lalu jalan lambat */
+@keyframes scrollTrick {
+  0% {
+    transform: translateX(10%); /* mulai dari luar kanan */
+  }
+  5% {
+    transform: translateX(0%); /* cepat masuk ke tengah */
+  }
+  100% {
+    transform: translateX(-100%); /* berjalan pelan keluar kiri */
+  }
+}
+
+@media (max-width: 600px) {
+  .marquee span {
+    font-size: 3em;
+  }
+}
