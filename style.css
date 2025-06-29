@@ -24,52 +24,15 @@ body {
   white-space: nowrap;
   color: white;
 
-  animation: scrollTrick 50s linear infinite;
+  animation: scrollTrick 20s linear infinite;
 }
-.nyinyir-wrapper {
-  position: fixed;
-  bottom: 100px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 999;
-}
-
-.nyinyir {
-  font-size: 2em;
-  color: #ff4d4d;
-  font-weight: bold;
-  animation: shake 0.5s ease, blurOut 3s 0.5s forwards;
-}
-
-/* Getar mengejek */
-@keyframes shake {
-  0% { transform: translateX(-50%) rotate(0deg); }
-  25% { transform: translateX(-48%) rotate(2deg); }
-  50% { transform: translateX(-52%) rotate(-2deg); }
-  75% { transform: translateX(-48%) rotate(1deg); }
-  100% { transform: translateX(-50%) rotate(0deg); }
-}
-
-/* Kabur dan hilang */
-@keyframes blurOut {
-  0% {
-    opacity: 1;
-    filter: blur(0);
-  }
-  100% {
-    opacity: 0;
-    filter: blur(8px);
-    transform: translateX(-50%) translateY(-20px);
-  }
-}
-
 
 /* 💡 Animasi: masuk cepat, lalu jalan lambat */
 @keyframes scrollTrick {
   0% {
     transform: translateX(10%); /* mulai dari luar kanan */
   }
-  5% {
+  10% {
     transform: translateX(0%); /* cepat masuk ke tengah */
   }
   100% {
