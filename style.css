@@ -30,9 +30,9 @@ body {
 /* 💡 Animasi: masuk cepat, lalu jalan lambat */
 @keyframes scrollTrick {
   0% {
-    transform: translateX(10%); /* mulai dari luar kanan */
+    transform: translateX(50%); /* mulai dari luar kanan */
   }
-  5% {
+  20% {
     transform: translateX(0%); /* cepat masuk ke tengah */
   }
   100% {
